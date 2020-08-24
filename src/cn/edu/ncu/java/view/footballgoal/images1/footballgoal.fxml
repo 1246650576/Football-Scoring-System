@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="table_content" maxWidth="770.0" prefHeight="665.0" prefWidth="770.0" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.edu.ncu.java.view.footballgoal.Controller">
+    <children>
+        <TableView id="table_view" fx:id="mTable" layoutX="-1.0" prefHeight="617.0" prefWidth="771.0">
+            <columns>
+                <TableColumn fx:id="mColumnSelect" prefWidth="60" resizable="false" text="选择" />
+                <TableColumn fx:id="mColumnTeamName" prefWidth="128.0" resizable="false" text="队名" />
+            <TableColumn fx:id="mColumnnumbers" prefWidth="119.0" text="编号" />
+            <TableColumn fx:id="mColumnturn" prefWidth="177.0" text="轮数" />
+            <TableColumn fx:id="mColumnGoalTime" minWidth="5.0" prefWidth="286.0" text="进球时间" />
+            </columns>
+        </TableView>
+        <HBox layoutX="-1.0" layoutY="618.0" prefHeight="50.0" prefWidth="771.0">
+            <children>
+                <TextField fx:id="mTxtTeamName" layoutX="33.0" layoutY="402.0" prefHeight="50.0" prefWidth="182.0" promptText="队名" />
+            <TextField fx:id="mTxtnumbers" prefHeight="50.0" prefWidth="96.0" promptText="编号" />
+            <TextField fx:id="mTxtturn" prefHeight="50.0" prefWidth="119.0" promptText="轮数" />
+                <TextField fx:id="mTxtGoalTime" layoutX="33.0" layoutY="402.0" prefHeight="50.0" prefWidth="213.0" promptText="进球时间" />
+                <Button fx:id="mBtnAdd" layoutX="33.0" layoutY="402.0" onAction="#onAdd" prefHeight="50.0" prefWidth="92.0" text="确定" />
+                  <Button fx:id="mBtnDelete" onAction="#onDelete" prefHeight="50.0" prefWidth="104.0" text="删除" />
+            </children>
+        </HBox>
+
+    </children>
+</AnchorPane>

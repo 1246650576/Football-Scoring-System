@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="table_content" prefHeight="744.0" prefWidth="846.0" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.edu.ncu.java.view.footballteam.Controller">
+    <children>
+        <TableView id="table_view" fx:id="mTable" layoutX="-2.0" prefHeight="646.0" prefWidth="848.0">
+            <columns>
+                <TableColumn fx:id="mColumnSelect" prefWidth="60" resizable="false" text="选择" />
+                <TableColumn fx:id="mColumnName" prefWidth="232.0" resizable="false" text="队名" />
+                <TableColumn fx:id="mColumnCollege" prefWidth="151.0" resizable="false" text="所属大学" />
+            <TableColumn fx:id="mColumnCoach" prefWidth="133.0" text="教练" />
+            <TableColumn fx:id="mColumnTime" prefWidth="271.0" text="成立时间" />
+            </columns>
+        </TableView>
+        <HBox layoutX="-1.0" layoutY="649.0" prefHeight="36.0" prefWidth="846.0">
+            <children>
+                <TextField fx:id="mTxtName" layoutX="33.0" layoutY="402.0" prefHeight="36.0" prefWidth="176.0" promptText="队名" />
+                <TextField fx:id="mTxtCollege" layoutX="33.0" layoutY="402.0" prefHeight="36.0" prefWidth="158.0" promptText="所属大学" />
+            <TextField fx:id="mTxtCoach" prefHeight="36.0" prefWidth="115.0" promptText="教练" />
+            <TextField fx:id="mTxtTime" prefHeight="36.0" prefWidth="206.0" promptText="成立时间" />
+                <Button fx:id="mBtnAdd" layoutX="33.0" layoutY="402.0" onAction="#onAdd" prefHeight="36.0" prefWidth="93.0" text="确定" />
+                  <Button fx:id="mBtnDelete" onAction="#onDelete" prefHeight="36.0" prefWidth="103.0" text="删除" />
+            </children>
+        </HBox>
+      <HBox layoutY="693.0" prefHeight="41.0" prefWidth="846.0">
+         <children>
+            <TextField fx:id="mTxtName1" layoutX="33.0" layoutY="402.0" prefHeight="41.0" prefWidth="654.0" promptText="请输入：队名" />
+            <Button layoutX="33.0" layoutY="402.0" onAction="#onFind" prefHeight="41.0" prefWidth="88.0" text="查询" />
+            <Button fx:id="mBtnDelete1" onAction="#onDel" prefHeight="41.0" prefWidth="104.0" text="清除" />
+         </children>
+      </HBox>
+
+    </children>
+</AnchorPane>

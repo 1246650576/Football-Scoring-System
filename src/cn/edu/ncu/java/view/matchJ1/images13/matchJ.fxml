@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="table_content" prefHeight="699.0" prefWidth="900.0" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.edu.ncu.java.view.matchJ1.Controller">
+    <children>
+        <TableView id="table_view" fx:id="mTable" layoutX="-2.0" prefHeight="699.0" prefWidth="932.0">
+            <columns>
+                <TableColumn fx:id="idCol" prefWidth="102.0" resizable="false" text="序号" />
+                <TableColumn fx:id="mColumnName" prefWidth="150.0" resizable="false" text="运动员" />
+            <TableColumn fx:id="mColumnTeamName" prefWidth="203.0" text="队名" />
+            <TableColumn fx:id="mColumnnumbers" prefWidth="81.0" text="编号" />
+            <TableColumn fx:id="mColumngoal" prefWidth="119.0" text="进球数" />
+            <TableColumn fx:id="mColumnRedCard" prefWidth="124.0" text="红牌" />
+            <TableColumn fx:id="mColumnYelllowCard" prefWidth="152.0" text="黄牌" />
+            </columns>
+        </TableView>
+
+    </children>
+</AnchorPane>

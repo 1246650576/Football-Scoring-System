@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="727.0" prefWidth="1115.0" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.edu.ncu.java.view.footballplayer.Controller">
+   <children>
+      <TableView id="table_view" fx:id="mTable" prefHeight="684.0" prefWidth="1105.0">
+         <columns>
+            <TableColumn fx:id="mColumnSelect" prefWidth="39.0" resizable="false" text="选择" />
+            <TableColumn fx:id="mColumnName" prefWidth="153.0" resizable="false" text="姓名" />
+            <TableColumn fx:id="mColumnAge" prefWidth="76.0" resizable="false" text="年龄" />
+            <TableColumn fx:id="mColumnTeam" prefWidth="176.0" text="所属球队" />
+            <TableColumn fx:id="mColumnNum" minWidth="0.0" prefWidth="79.0" text="编号" />
+            <TableColumn fx:id="mColumnSex" prefWidth="66.0" text="性别" />
+            <TableColumn fx:id="mColumnPosition" minWidth="5.0" prefWidth="92.0" text="位置" />
+            <TableColumn fx:id="mColumnHeight" prefWidth="82.0" text="身高" />
+            <TableColumn fx:id="mColumnWeight" prefWidth="94.0" text="体重" />
+            <TableColumn fx:id="mColumnBirthday" prefWidth="247.0" text="出生日期" />
+         </columns>
+      </TableView>
+      <HBox layoutY="643.0" prefHeight="41.0" prefWidth="1115.0">
+         <children>
+            <TextField fx:id="mTxtName" layoutX="33.0" layoutY="402.0" prefHeight="50.0" prefWidth="120.0" promptText="姓名" />
+            <TextField fx:id="mTxtAge" layoutX="33.0" layoutY="402.0" prefHeight="49.0" prefWidth="70.0" promptText="年龄" />
+            <TextField fx:id="mTxtTeam" prefHeight="50.0" prefWidth="201.0" promptText="所属球队" />
+            <TextField fx:id="mTxtNum" prefHeight="46.0" prefWidth="70.0" promptText="编号" />
+            <TextField fx:id="mTxtSex" prefHeight="54.0" prefWidth="70.0" promptText="性别" />
+            <TextField fx:id="mTxtPosition" prefHeight="49.0" prefWidth="150.0" promptText="位置" />
+            <TextField fx:id="mTxtHeight" prefHeight="45.0" prefWidth="80.0" promptText="身高" />
+            <TextField fx:id="mTxtWeight" prefHeight="49.0" prefWidth="80.0" promptText="体重" />
+            <TextField fx:id="mTxtBirthday" prefHeight="46.0" prefWidth="180.0" promptText="出生日期" />
+            <Button layoutX="33.0" layoutY="402.0" onAction="#onAdd" prefHeight="43.0" prefWidth="80.0" text="确定" />
+            <Button fx:id="mBtnDelete" onAction="#onDelete" prefHeight="42.0" prefWidth="90.0" text="删除" />
+         </children>
+      </HBox>
+      <HBox layoutY="683.0" prefHeight="41.0" prefWidth="1115.0">
+         <children>
+            <TextField fx:id="mTxtName1" layoutX="33.0" layoutY="402.0" prefHeight="50.0" prefWidth="300.0" promptText="请输入：队名" />
+            <TextField fx:id="mTxtNum1" prefHeight="41.0" prefWidth="300.0" promptText="请输入：编号" />
+            <Button layoutX="33.0" layoutY="402.0" onAction="#onFind" prefHeight="41.0" prefWidth="271.0" text="查询" />
+            <Button fx:id="mBtnDelete1" onAction="#onDel" prefHeight="41.0" prefWidth="255.0" text="清除" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane id="table_content" prefHeight="688.0" prefWidth="1012.0" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.edu.ncu.java.view.matchD.Controller">
+    <children>
+        <TableView id="table_view" fx:id="mTable" layoutX="-2.0" prefHeight="823.0" prefWidth="1012.0">
+            <columns>
+                <TableColumn fx:id="mColumnTime" prefWidth="225.0" text="比赛时间" />
+                <TableColumn fx:id="mColumnHomeTeam" prefWidth="187.0" resizable="false" text="主队" />
+                <TableColumn fx:id="mColumnvisitingTeam" prefWidth="180.0" resizable="false" text="客队" />
+                <TableColumn fx:id="mColumnHomeScore" prefWidth="113.0" text="主队进球数" />
+                <TableColumn fx:id="mColumnVisitingScore" prefWidth="116.0" text="客队进球数" />
+                <TableColumn fx:id="mColumnturnone" prefWidth="90.0" text="轮数" />
+                <TableColumn fx:id="mColumnturntwo" prefWidth="100.0" text="组别" />
+            </columns>
+        </TableView>
+
+    </children>
+</AnchorPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="table_content" prefHeight="866.0" prefWidth="1349.0" stylesheets="@MainStyleH.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.edu.ncu.java.view.matchH2.Controller">
+    <children>
+        <TableView id="table_view" fx:id="mTable" layoutX="-2.0" prefHeight="866.0" prefWidth="1348.0">
+            <columns>
+                <TableColumn fx:id="idCol" prefWidth="73.0" resizable="false" text="序号" />
+            <TableColumn fx:id="changesCol" prefWidth="79.0" text="升降" />
+                <TableColumn fx:id="mColumnName" prefWidth="223.0" resizable="false" text="战队名" />
+            <TableColumn fx:id="matchsCol" prefWidth="98.0" text="场数" />
+            <TableColumn fx:id="winCol" prefWidth="74.0" text="赢" />
+            <TableColumn fx:id="evenCol" prefWidth="50.0" text="平" />
+            <TableColumn fx:id="beatenCol" prefWidth="57.0" text="负" />
+            <TableColumn fx:id="goalCol" prefWidth="56.0" text="进球数" />
+            <TableColumn fx:id="lostCol" prefWidth="67.0" text="失球数" />
+            <TableColumn fx:id="netCol" prefWidth="70.0" text="净球数" />
+            <TableColumn fx:id="avergoalCol" prefWidth="125.0" text="场均进球" />
+            <TableColumn fx:id="averlostCol" prefWidth="123.0" text="场均失球" />
+            <TableColumn fx:id="avernetCol" prefWidth="125.0" text="场均净球" />
+                <TableColumn fx:id="mColumnScore" prefWidth="125.0" text="场均积分" />
+            </columns>
+        </TableView>
+
+    </children>
+</AnchorPane>

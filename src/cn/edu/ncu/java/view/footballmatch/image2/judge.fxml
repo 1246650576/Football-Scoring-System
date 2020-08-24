@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<AnchorPane id="table_content" prefHeight="656.0" prefWidth="631.0" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.edu.ncu.java.view.footballmatch.Controller">
+    <children>
+        <TableView id="table_view" fx:id="mTable" layoutX="-2.0" prefHeight="617.0" prefWidth="636.0">
+            <columns>
+                <TableColumn fx:id="mColumnSelect" prefWidth="60" resizable="false" text="选择" />
+                <TableColumn fx:id="mColumnName" prefWidth="107.0" resizable="false" text="姓名" />
+                <TableColumn fx:id="mColumnSex" prefWidth="70.0" resizable="false" text="性别" />
+            <TableColumn fx:id="mColumnAge" prefWidth="108.0" text="年龄" />
+            <TableColumn fx:id="mColumnBirthday" prefWidth="278.0" text="出生日期" />
+            </columns>
+        </TableView>
+        <HBox layoutX="-1.0" layoutY="618.0" prefHeight="36.0" prefWidth="636.0">
+            <children>
+                <TextField fx:id="mTxtName" layoutX="33.0" layoutY="402.0" prefHeight="46.0" prefWidth="110.0" promptText="姓名" />
+                <TextField fx:id="mTxtSex" layoutX="33.0" layoutY="402.0" prefHeight="36.0" prefWidth="68.0" promptText="性别" />
+            <TextField fx:id="mTxtAge" prefHeight="36.0" prefWidth="72.0" promptText="年龄" />
+            <TextField fx:id="mTxtBirthday" prefHeight="41.0" prefWidth="189.0" promptText="出生日期" />
+                <Button fx:id="mBtnAdd" layoutX="33.0" layoutY="402.0" onAction="#onAdd" prefHeight="36.0" prefWidth="92.0" text="确定" />
+                  <Button fx:id="mBtnDelete" onAction="#onDelete" prefHeight="36.0" prefWidth="104.0" text="删除" />
+            </children>
+        </HBox>
+
+    </children>
+</AnchorPane>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="pane" fx:id="root" prefHeight="750.0" prefWidth="1200.0" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.edu.ncu.java.view.gui.IndexController">
+   <children>
+      <VBox layoutX="3.0" layoutY="164.0" prefHeight="584.0" prefWidth="150.0">
+         <children>
+            <Button fx:id="footballplayer" mnemonicParsing="false" onAction="#Footballplayer" prefHeight="60.0" prefWidth="150.0" text="球员信息">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="footballteam" mnemonicParsing="false" onAction="#Footballteam" prefHeight="60.0" prefWidth="150.0" text="球队信息">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="footballscene" mnemonicParsing="false" onAction="#Footballscene" prefHeight="60.0" prefWidth="150.0" text="进球信息">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="menuitem67" mnemonicParsing="false" onAction="#Menuitem67" prefHeight="60.0" prefWidth="150.0" text="裁决罚单">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+            <MenuButton mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" text="比赛信息">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="循环赛">
+                     <graphic>
+                        <MenuButton mnemonicParsing="false">
+                          <items>
+                            <MenuItem fx:id="menuitem1" mnemonicParsing="false" onAction="#Menuitem1" text="男子甲组" />
+                            <MenuItem fx:id="menuitem2" mnemonicParsing="false" onAction="#Menuitem2" text="男子乙组" />
+                              <MenuItem fx:id="menuitem3" mnemonicParsing="false" onAction="#Menuitem3" text="女子组" />
+                              <MenuItem fx:id="menuitem4" mnemonicParsing="false" onAction="#Menuitem4" text="成年组" />
+                          </items>
+                        </MenuButton>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="menuitem5" mnemonicParsing="false" onAction="#Menuitem5" text="淘汰赛" />
+               </items>
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </MenuButton>
+            <MenuButton mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" text="排行榜">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <items>
+                  <MenuItem mnemonicParsing="false" text="射手榜">
+                     <graphic>
+                        <MenuButton mnemonicParsing="false">
+                          <items>
+                            <MenuItem fx:id="menuitem9" mnemonicParsing="false" text="男子组" />
+                            <MenuItem fx:id="menuitem91" mnemonicParsing="false" text="女子组" />
+                              <MenuItem fx:id="menuitem92" mnemonicParsing="false" text="成年组" />
+                          </items>
+                        </MenuButton>
+                     </graphic></MenuItem>
+                  <MenuItem mnemonicParsing="false" text="球队排行榜">
+                     <graphic>
+                        <MenuButton mnemonicParsing="false">
+                           <items>
+                              <MenuItem fx:id="menuitem8" mnemonicParsing="false" onAction="#Menuitem1" text="男子组" />
+                              <MenuItem fx:id="menuitem81" mnemonicParsing="false" onAction="#Menuitem3" text="女子组" />
+                              <MenuItem fx:id="menuitem82" mnemonicParsing="false" onAction="#Menuitem4" text="成年组" />
+                           </items>
+                        </MenuButton>
+                     </graphic>
+                  </MenuItem>
+               </items>
+            </MenuButton>
+         </children>
+      </VBox>
+      <TextField id="myTextField" fx:id="myTextField" layoutX="931.0" layoutY="32.0" onAction="#myTextField" prefHeight="41.0" prefWidth="223.0">
+         <font>
+            <Font size="20.0" />
+         </font></TextField>
+      <Label alignment="CENTER_RIGHT" layoutX="831.0" layoutY="32.0" prefHeight="40.0" prefWidth="100.0" text="今天是：">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <ImageView fitHeight="148.0" fitWidth="144.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@football.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="anchorPane" layoutX="151.0" layoutY="80.0" prefHeight="488.0" prefWidth="948.0">
+         <children>
+            <BorderPane fx:id="mediaPane" layoutY="4.0" prefHeight="480.0" prefWidth="933.0">
+               <center>
+                  <MediaView fx:id="mediaView" fitHeight="300.0" fitWidth="800.0" nodeOrientation="INHERIT" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+            <VBox fx:id="controlBar" prefHeight="50.0" prefWidth="500.0">
+               <children>
+                  <Slider fx:id="processSD" style="-fx-background-color: #4b4b4b;" VBox.vgrow="ALWAYS" />
+                  <BorderPane fx:id="controlBorderPane" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="56.0">
+                     <left>
+                        <HBox alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="maxBT" mnemonicParsing="false" prefHeight="31.0" prefWidth="20.0" HBox.hgrow="ALWAYS" />
+                              <Label fx:id="timeLB" text="Time" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                     </left>
+                     <center>
+                        <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="playBT" mnemonicParsing="false" HBox.hgrow="ALWAYS" />
+                              <Button fx:id="stopBT" mnemonicParsing="false" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </center>
+                     <right>
+                        <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Slider fx:id="volumeSD" minHeight="-Infinity" prefWidth="150.0" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin></Slider>
+                              <Button fx:id="volumeBT" mnemonicParsing="false" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                     </right>
+                  </BorderPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

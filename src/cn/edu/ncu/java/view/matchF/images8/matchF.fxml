@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="table_content" prefHeight="656.0" prefWidth="888.0" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.edu.ncu.java.view.matchF.Controller">
+    <children>
+        <TableView id="table_view" fx:id="mTable" layoutX="-2.0" prefHeight="617.0" prefWidth="888.0">
+            <columns>
+                <TableColumn fx:id="mColumnSelect" prefWidth="60" resizable="false" text="选择" />
+                <TableColumn fx:id="mColumnJudge" prefWidth="181.0" resizable="false" text="队名" />
+                <TableColumn fx:id="mColumnNum" prefWidth="105.0" resizable="false" text="球号" />
+            <TableColumn fx:id="mColumnRed" prefWidth="150.0" text="红牌数" />
+            <TableColumn fx:id="mColumnYellow" prefWidth="139.0" text="黄牌数" />
+            <TableColumn fx:id="mColumnTurn" prefWidth="75.0" text="轮数" />
+            <TableColumn fx:id="mColumnTime" prefWidth="177.0" text="处罚时间" />
+            </columns>
+        </TableView>
+        <HBox layoutX="-1.0" layoutY="618.0" prefHeight="36.0" prefWidth="888.0">
+            <children>
+                <TextField fx:id="mTxtJudge" layoutX="33.0" layoutY="402.0" prefHeight="36.0" prefWidth="203.0" promptText="队名" />
+                <TextField fx:id="mTxtNum" layoutX="33.0" layoutY="402.0" prefHeight="36.0" prefWidth="109.0" promptText="球号" />
+            <TextField fx:id="mTxtRed" prefHeight="36.0" prefWidth="118.0" promptText="红牌数" />
+            <TextField fx:id="mTxtYellow" prefHeight="36.0" prefWidth="133.0" promptText="黄牌数" />
+            <TextField fx:id="mTxtTurn" prefHeight="36.0" prefWidth="118.0" promptText="轮数" />
+            <TextField fx:id="mTxtTime" prefHeight="36.0" prefWidth="269.0" promptText="处罚时间" />
+                <Button fx:id="mBtnAdd" layoutX="33.0" layoutY="402.0" onAction="#onAdd" prefHeight="36.0" prefWidth="120.0" text="确定" />
+                  <Button fx:id="mBtnDelete" onAction="#onDelete" prefHeight="36.0" prefWidth="109.0" text="删除" />
+            </children>
+        </HBox>
+
+    </children>
+</AnchorPane>
